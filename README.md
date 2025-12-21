@@ -9,59 +9,14 @@ This repository primarily contains a Jupyter Notebook `problems.ipynb`, represen
 This project applies statistical simulation and inference techniques to classical problems in applied statistics.
 The notebook demonstrates the use of Monte Carlo simulation, sampling distributions, hypothesis testing, and analysis of variance (ANOVA), with an emphasis on interpretation and reproducibility rather than purely numerical results.
 
-The work is intended to demonstrate both statistical understanding and clean, reproducible scientific computing practices in Python.
+The work is intended to demonstrate both statistical understanding and reproducible, clean and concise Python code.
 
 ## Repository Contents ##
 
 - `.gitignore`: File using the Python, Windows and Mac OS gitignore templates.
 - `README.md`: This README file.
 - `requirements.txt`: Included in the repository for easy installation, it contains the third-party package dependencies.
-- `problems.ipynb`: The notebook is structured with an initial import of all required packages, clearly labelled sections for each problem, and concluding discussion summaries where applicable.
-
-## Problems ##
-
-The purpose of this repo is to solve the below:
-
-### Problem 1: Extending the Lady Tasting Tea ###
-
-Let's extend the Lady Tasting Tea experiment as follows.
-The original experiment has 8 cups: 4 tea-first and 4 milk-first.
-Suppose we prepare 12 cups: 8 tea-first and 4 milk-first.
-A participant claims they can tell which was poured first.  
-
-Simulate this experiment using `numpy` by randomly shuffling the cups many times and calculating the probability of the participant correctly identifying all cups by chance.
-Compare your result with the original 8-cup experiment.  
-
-In your notebook, explain your simulation process clearly, report and interpret the estimated probability, and discuss whether, based on this probability, you would consider extending or relaxing the p-value threshold compared to the original design.  
-
-### Problem 2: Normal Distribution ###
-
-Generate 100,000 samples of size 10 from the standard normal distribution.
-For each sample, compute the standard deviation with `ddof=1` (sample SD) and with `ddof=0` (population SD).
-Plot histograms of both sets of values on the same axes with transparency.
-Describe the differences you see.
-Explain how you expect these differences to change if the sample size is increased.
-
-### Problem 3: t-Tests ###
-
-A type II error occurs when a test fails to reject the null hypothesis even though it is false.
-For each mean difference $d = 0, 0.1, 0.2, \dots, 1.0$, repeat the following simulation 1,000 times:
-
-1. Draw two samples of size 100, one from the standard normal distribution and one from the normal distribution with mean $d$ and standard deviation 1.
-2. Run an independent samples t-test on the two samples, rejecting the null hypothesis if the p-value is less than 0.05.
-3. Record the proportion of times the null hypothesis is not rejected.
-
-Plot this proportion against $d$, and explain how the type II error rate changes as the difference in means increases.
-
-### Problem 4: ANOVA ###
-
-Generate three independent samples, each of size 30, from normal distributions with means 0, 0.5, and 1, each with standard deviation 1.
-
-1. Perform a one-way ANOVA to test whether all three means are equal.
-2. Perform three independent two-sample t-tests: samples 1 vs 2, 1 vs 3, and 2 vs 3.
-3. Compare the conclusions.
-
-Write a short note on why ANOVA is preferred over running several t-tests.
+- `problems.ipynb`: The notebook is structured with an initial inroduction and import of all required packages, clearly labelled sections for each problem, and a conclusion summary.
 
 ## Getting Started ##
 
@@ -117,9 +72,7 @@ Special thanks to my lecturer on the Applied Statistics module, Ian McLoughlin, 
 
 References to relevant statistical literature and official documentation (e.g. NumPy, SciPy, and classical statistical experiments) are included in the relevant sections of the notebook and discussed in context.
 
-[ChatGPT](chatgpt.com) was used as a virtual reviewer to assist with refining the structure, clarity, and presentation of this repository and notebook.
-All statistical analysis, implementation, and interpretation remain my own. Prompts are included where applicable in the notebook.
-
+[ChatGPT](chatgpt.com) was used primarily for assistance genertaing this README and for both the introduction and conclusion sections of the notebook. It was also used as a general debugging tool for Python code cells.
 For this README, this [prompt](https://chatgpt.com/share/694735d0-e404-8006-af07-d98244b077ad) was used to generate suggested improvements, the majority of which have been included.
 
 ## End ##
